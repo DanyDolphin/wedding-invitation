@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-accent: #536239;
+  --color-primary: #F5F2E7;
+  --color-secondary: #8c7c61;
+}
+
+button, a[role=button] {
+  background-color: var(--color-accent);
+  padding: 4px 40px;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+}
+
+hr {
+  border-color: var(--color-accent);
+  width: 70%;
+  margin: 16px 0;
+}
+
+/* custom classes */
+
+.hero-leaf {
+  transform: translateX(calc(-50% + 23px))
+}
