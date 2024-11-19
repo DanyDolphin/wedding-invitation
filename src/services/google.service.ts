@@ -41,7 +41,7 @@ export const updateSheet = async (
   range: string,
   values: string[][]
 ): Promise<void> => {
-  await client.spreadsheets.values.update({
+  const response = await client.spreadsheets.values.update({
     auth: credentials,
     spreadsheetId: speadsheetId,
     range: (sheetName ? "'" + sheetName + "'!" : '') + range,
@@ -50,4 +50,5 @@ export const updateSheet = async (
       values,
     },
   })
+  console.log(response)
 }
