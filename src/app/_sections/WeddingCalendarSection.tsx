@@ -9,8 +9,11 @@ import Section from '@/components/Section'
 // Images
 import leaf2 from '@images/leaf2.webp'
 import leaf3 from '@images/leaf3.webp'
+import { useEffect, useState } from 'react'
 
 const WeddingCalendarSection = () => {
+  const [calendarLink, setCalendarLink] = useState<string>('')
+
   const generateGoogleCalendarLink = () => {
     const text = '💌 Boda: Allison y Mario'
     const startDate = '20250215170000Z'
@@ -19,6 +22,10 @@ const WeddingCalendarSection = () => {
       window.location.href
     )}`
   }
+
+  useEffect(() => {
+    setCalendarLink(generateGoogleCalendarLink())
+  }, [])
 
   return (
     <Section className="flex flex-col items-center">
@@ -41,7 +48,7 @@ const WeddingCalendarSection = () => {
       <a
         role="button"
         target="_blank"
-        href={generateGoogleCalendarLink()}
+        href={calendarLink}
         className="font-body2 mb-10"
       >
         Agregar al calendario
