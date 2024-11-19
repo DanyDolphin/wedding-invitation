@@ -25,8 +25,6 @@ const Home: FC<Page> = async ({ searchParams }) => {
   const { name = '' } = await searchParams
 
   const guest = await getGuest(name as string)
-  console.log(guest)
-
   if (!guest) {
     redirect('/not-found?name=' + encodeURIComponent(name as string))
   }

@@ -23,9 +23,6 @@ export async function GET(request: NextRequest) {
     return notFound
   }
 
-  console.log(guest)
-  console.log(name)
-
   return Response.json({
     message: 'found',
     data: guest,
