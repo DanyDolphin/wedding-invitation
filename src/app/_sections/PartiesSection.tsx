@@ -3,7 +3,7 @@ import Section from '@/components/Section'
 
 const PartiesSection = () => {
   return (
-    <Section className="flex flex-col items-center">
+    <Section className="flex flex-col items-center enter-animation enter-fade-up">
       <p className="font-body2 text-md uppercase tracking-widest text-accent mt-32">
         Con la bendicion de nuestros padres
       </p>

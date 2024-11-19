@@ -1,0 +1,11 @@
+.enter-fade-up {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  will-change: transform, opacity;
+}
+
+.enter-fade-up.show {
+  transform: translateY(0);
+  opacity: 1;
+}

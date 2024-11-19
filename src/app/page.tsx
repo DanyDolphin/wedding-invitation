@@ -1,3 +1,9 @@
+// Next
+import { redirect } from 'next/navigation'
+
+// React
+import { FC } from 'react'
+
 // Components
 import HeroSection from './_sections/HeroSection'
 import WeddingCalendarSection from './_sections/WeddingCalendarSection'
@@ -9,18 +15,35 @@ import AssistanceSection from './_sections/AssistanceSection'
 import GiftTableSection from './_sections/GiftTableSection'
 import DressingCodeSection from './_sections/DressingCodeSection'
 
-export default function Home() {
+// Types
+import { Page } from '@/types'
+
+// Services
+import { getGuest } from '@/services/guest.service'
+
+const Home: FC<Page> = async ({ searchParams }) => {
+  const { name = '' } = await searchParams
+
+  const guest = await getGuest(name as string)
+  console.log(guest)
+
+  if (!guest) {
+    redirect('/not-found?name=' + encodeURIComponent(name as string))
+  }
+
   return (
     <>
       <HeroSection />
       <WeddingCalendarSection />
-      <InvitationSection />
+      <InvitationSection guest={guest} />
       <PartiesSection />
       <ScheduleSection />
       <LocationSection />
-      <AssistanceSection />
+      <AssistanceSection guest={guest} />
       <GiftTableSection />
       <DressingCodeSection />
     </>
   )
 }
+
+export default Home

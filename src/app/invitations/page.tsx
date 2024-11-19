@@ -7,14 +7,15 @@ import Section from '@/components/Section'
 // Images
 import background from '@images/section-background.png'
 import leaf from '@images/leaf.svg'
+import InvitationGenerator from '@/components/InvitationGenerator'
 
-const HeroSection = () => {
+const InvitationsPage = () => {
   return (
     <Section
       backgroundImage={background}
-      className="h-screen flex flex-col items-center justify-center text-8xl"
+      className="h-screen flex flex-col items-center justify-center"
     >
-      <h1 className="flex items-end relative">
+      <h1 className="flex items-end relative text-8xl">
         <Image
           src={leaf}
           alt="leaf"
@@ -24,11 +25,9 @@ const HeroSection = () => {
         <div className="w-20"></div>
         <span className="font-head1">M</span>
       </h1>
-      <h2 className="font-head2 font-thin text-xl tracking-[0.3em] mt-4 enter-animation enter-fade-up">
-        ¡Nos casamos!
-      </h2>
+      <InvitationGenerator />
     </Section>
   )
 }
 
-export default HeroSection
+export default InvitationsPage

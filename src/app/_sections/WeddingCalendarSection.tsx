@@ -1,3 +1,5 @@
+'use client'
+
 // Next
 import Image from 'next/image'
 
@@ -9,6 +11,15 @@ import leaf2 from '@images/leaf2.webp'
 import leaf3 from '@images/leaf3.webp'
 
 const WeddingCalendarSection = () => {
+  const generateGoogleCalendarLink = () => {
+    const text = '💌 Boda: Allison y Mario'
+    const startDate = '20250215170000Z'
+    const endDate = '20250216000000Z'
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${startDate}/${endDate}&details=Detalles en ${encodeURI(
+      window.location.href
+    )}`
+  }
+
   return (
     <Section className="flex flex-col items-center">
       <Image
@@ -27,7 +38,14 @@ const WeddingCalendarSection = () => {
         15 febrero 2025 | 5:00 pm
       </p>
       <hr className="w-1/2" />
-      <button className="font-body2 mb-10">Agregar al calendario</button>
+      <a
+        role="button"
+        target="_blank"
+        href={generateGoogleCalendarLink()}
+        className="font-body2 mb-10"
+      >
+        Agregar al calendario
+      </a>
       <Image src={leaf3} alt="Leaf" className="h-48 object-contain" />
     </Section>
   )

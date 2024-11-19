@@ -8,7 +8,7 @@ import Section from '@/components/Section'
 import background from '@images/section-background.png'
 import leaf from '@images/leaf.svg'
 
-const HeroSection = () => {
+const NotFoundPage = () => {
   return (
     <Section
       backgroundImage={background}
@@ -24,11 +24,14 @@ const HeroSection = () => {
         <div className="w-20"></div>
         <span className="font-head1">M</span>
       </h1>
-      <h2 className="font-head2 font-thin text-xl tracking-[0.3em] mt-4 enter-animation enter-fade-up">
-        ¡Nos casamos!
+      <h2 className="font-head2 font-thin text-xl tracking-[0.3em] mt-8">
+        Lo sentimos, no te encontramos en la lista de invitados
       </h2>
+      <p className="font-body2 font-thin text-xl tracking-[0.3em] mt-4">
+        Comunícate con Allison o Mario para resolver el malentendido
+      </p>
     </Section>
   )
 }
 
-export default HeroSection
+export default NotFoundPage

@@ -8,14 +8,14 @@ const DressingCodeSection = () => {
   return (
     <Section backgroundImage={background}>
       <div className="flex flex-col gap-12 sm:grid sm:gap-y-32 sm:grid-cols-3 py-32 items-center justify-items-center">
-        <p className="col-start-2 font-handwritting text-accent text-5xl text-center">
+        <p className="col-start-2 font-handwritting text-accent text-5xl text-center enter-animation enter-fade-up">
           Sombrero
           <span className="font-body2 uppercase tracking-widest text-base block">
             Opcional
           </span>
         </p>
         <div></div>
-        <p className="font-handwritting text-accent text-5xl text-center">
+        <p className="font-handwritting text-accent text-5xl text-center enter-animation enter-fade-up">
           Traje
           <span className="col-start-1 font-body2 uppercase tracking-widest text-base block">
             Formal
@@ -26,13 +26,13 @@ const DressingCodeSection = () => {
           <br />
           vestimenta
         </p>
-        <p className="font-handwritting text-accent text-5xl text-center">
+        <p className="font-handwritting text-accent text-5xl text-center enter-animation enter-fade-up">
           Botas
           <span className="col-start-1 font-body2 uppercase tracking-widest text-base block">
             Opcional
           </span>
         </p>
-        <p className="col-start-2 font-handwritting text-accent text-5xl text-center">
+        <p className="col-start-2 font-handwritting text-accent text-5xl text-center enter-animation enter-fade-up">
           Vestido
           <span className="col-start-1 font-body2 uppercase tracking-widest text-base block">
             Largo

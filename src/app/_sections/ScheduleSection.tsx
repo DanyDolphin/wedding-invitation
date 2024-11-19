@@ -27,22 +27,38 @@ const ScheduleSection = () => {
           </h1>
           <hr className="my-10" />
           <div className="grid grid-cols-3 gap-8 justify-items-center items-center mb-20">
-            <Image src={wedding} alt="Wedding" className="col-start-2 h-14" />
-            <p className="font-body2 text-base text-accent uppercase text-center tracking-widest">
+            <Image
+              src={wedding}
+              alt="Wedding"
+              className="col-start-2 h-14 enter-animation enter-fade-up"
+            />
+            <p className="font-body2 text-base text-accent uppercase text-center tracking-widest enter-animation enter-fade-up">
               Ceremonia <br /> 5:oo pm
             </p>
-            <p className="font-body2 text-base text-accent uppercase text-center tracking-widest">
+            <p className="font-body2 text-base text-accent uppercase text-center tracking-widest enter-animation enter-fade-up">
               Recepción <br /> 6:oo pm
             </p>
-            <Image src={coups} alt="Coups" className="h-20" />
-            <Image src={plate} alt="Plate" className="col-start-2 h-14" />
-            <p className="font-body2 text-base text-accent uppercase text-center tracking-widest">
+            <Image
+              src={coups}
+              alt="Coups"
+              className="h-20 enter-animation enter-fade-up"
+            />
+            <Image
+              src={plate}
+              alt="Plate"
+              className="col-start-2 h-14 enter-animation enter-fade-up"
+            />
+            <p className="font-body2 text-base text-accent uppercase text-center tracking-widest enter-animation enter-fade-up">
               Cena <br /> 7:oo pm
             </p>
-            <p className="font-body2 text-base text-accent uppercase text-center tracking-widest">
+            <p className="font-body2 text-base text-accent uppercase text-center tracking-widest enter-animation enter-fade-up">
               Fiesta <br /> 8:3o pm
             </p>
-            <Image src={party} alt="Party" className="h-20" />
+            <Image
+              src={party}
+              alt="Party"
+              className="h-20 enter-animation enter-fade-up"
+            />
           </div>
         </div>
         <Image src={branch} alt="Branch" className="h-64 object-contain" />
@@ -61,7 +77,11 @@ const ScheduleSection = () => {
             <br />
             adultos
           </p>
-          <Image src={leaf4} alt="Leaf" className="w-20 h-24 object-contain" />
+          <Image
+            src={leaf4}
+            alt="Leaf"
+            className="w-20 h-24 object-contain enter-animation enter-fade-up"
+          />
           <p>
             Sin
             <br />

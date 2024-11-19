@@ -29,9 +29,14 @@ const LocationSection = () => {
             <br />
             mismo lugar
           </p>
-          <button className="mt-10 uppercase font-body2 px-32">
+          <a
+            role="button"
+            target="_blank"
+            href="https://maps.app.goo.gl/KDU67L3Fysir3edu5"
+            className="inline-block mt-10 uppercase font-body2 px-32"
+          >
             ubicación
-          </button>
+          </a>
           <p className="text-center font-body2 text-xl mt-2">
             Hacienda del Marqués, Saldarriaga, Querétaro.
           </p>
