@@ -33,7 +33,7 @@ const PartiesSection = () => {
         Grecia Karen Alvarado Mares
       </p>
       <p className="font-body2 text-md uppercase tracking-widest text-accent mt-8">
-        Nuestros testigos
+        Padrinos
       </p>
       <p className="text-center font-body2 mt-4">
         Julio César Román Pedraza

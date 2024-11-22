@@ -36,7 +36,7 @@ const ScheduleSection = () => {
               Ceremonia <br /> 5:oo pm
             </p>
             <p className="font-body2 text-base text-accent uppercase text-center tracking-widest enter-animation enter-fade-up">
-              Recepción <br /> 6:oo pm
+              Recepción <br /> 5:45 pm
             </p>
             <Image
               src={coups}
@@ -49,10 +49,10 @@ const ScheduleSection = () => {
               className="col-start-2 h-14 enter-animation enter-fade-up"
             />
             <p className="font-body2 text-base text-accent uppercase text-center tracking-widest enter-animation enter-fade-up">
-              Cena <br /> 7:oo pm
+              Cena <br /> 6:30 pm
             </p>
             <p className="font-body2 text-base text-accent uppercase text-center tracking-widest enter-animation enter-fade-up">
-              Fiesta <br /> 8:3o pm
+              Fiesta <br /> 7:3o pm
             </p>
             <Image
               src={party}

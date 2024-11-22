@@ -42,9 +42,6 @@ tu asistencia o avisar que no podras asistir:
 💌 ${baseUrl}/?name=${encodeURIComponent(name)}
 
 Atte. *Allison y Mario*
-
-- Haz clic en el botón Aceptar/Continuar para activar el enlace.
-- Este mensaje ha sido generado automáticamente 🤖 No es necesario que lo respondas.
         `)
       }
     } catch (err) {
