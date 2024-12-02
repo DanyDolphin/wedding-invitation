@@ -92,35 +92,55 @@ const AssistanceSection: FC<AssistanceSectionProps> = ({ guest }) => {
     >
       <div className="bg-primary my-40 py-20 px-10 text-center tracking-widest">
         <p className="font-head3 text-xl uppercase">Confirma tu asistencia</p>
-        <p className="text-sm font-body2 text-secondary">
-          Favor de confirmar el número total de personas que asistirán.
-          <br />
-          (Puedes confirmar hasta {maxTickets} personas)
-        </p>
-        <input
-          type="number"
-          value={tickets}
-          max={maxTickets}
-          min={1}
-          onChange={(e) => setTickets(Number(e.target.value))}
-          disabled={loading}
-          className="mx-auto w-20"
-        />
-        <br />
-        <button className="mt-2 font-body2" onClick={confirmAssistance}>
-          {loading ? '...' : 'Confirmar asistencia'}
-        </button>
-        <p className="font-head3 text-xl uppercase mt-10">
-          No podré ir, lo siento
-        </p>
-        <p className="text-sm font-body2 text-secondary">
-          Lo entenderemos, si deseas hacernos un obsequio
-          <br />
-          te compartimos opciones
-        </p>
-        <button className="mt-2 font-body2" onClick={cancelAssistance}>
-          {loading ? '...' : 'No puedo ir'}
-        </button>
+        {guest?.confirmationDate ? (
+          <>
+            <p className="text-sm font-body2 text-secondary">
+              Hemos registrado tu elección
+            </p>
+            <p className="font-head3 text-xl uppercase mt-10">
+              Vas a asistir?{' '}
+              <span className="uppercase">{guest?.willAssist}</span>
+            </p>
+            {guest.willAssist === ConfirmStatus.YES && (
+              <p className="font-head3 text-xl uppercase mt-10">
+                Número de boletos requeridos:{' '}
+                <span className="uppercase">{guest?.tickets}</span>
+              </p>
+            )}
+          </>
+        ) : (
+          <>
+            <p className="text-sm font-body2 text-secondary">
+              Favor de confirmar el número total de personas que asistirán.
+              <br />
+              (Puedes confirmar hasta {maxTickets} personas)
+            </p>
+            <input
+              type="number"
+              value={tickets}
+              max={maxTickets}
+              min={1}
+              onChange={(e) => setTickets(Number(e.target.value))}
+              disabled={loading}
+              className="mx-auto w-20"
+            />
+            <br />
+            <button className="mt-2 font-body2" onClick={confirmAssistance}>
+              {loading ? '...' : 'Confirmar asistencia'}
+            </button>
+            <p className="font-head3 text-xl uppercase mt-10">
+              No podré ir, lo siento
+            </p>
+            <p className="text-sm font-body2 text-secondary">
+              Lo entenderemos, si deseas hacernos un obsequio
+              <br />
+              te compartimos opciones
+            </p>
+            <button className="mt-2 font-body2" onClick={cancelAssistance}>
+              {loading ? '...' : 'No puedo ir'}
+            </button>
+          </>
+        )}
       </div>
     </Section>
   )

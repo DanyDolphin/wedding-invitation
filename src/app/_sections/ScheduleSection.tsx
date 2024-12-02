@@ -63,6 +63,11 @@ const ScheduleSection = () => {
         </div>
         <Image src={branch} alt="Branch" className="h-64 object-contain" />
       </div>
+      <div className="text-center">
+        <span className="tracking-widest uppercase font-body2">
+          * Descorche libre *
+        </span>
+      </div>
       <div className="w-96 flex flex-col items-center mb-32">
         <p className="text-center text-accent font-body2 text-base mt-10">
           <span className="tracking-widest uppercase">Con todo respeto</span>
